@@ -7,36 +7,36 @@
 <div class="container">
     <h2 class="text-center">@ViewData["Title"]</h2>
 
-    <form asp-action="Create" method="post" class="registration-form">
+    <form id="registrationForm" method="post" class="registration-form">
         @Html.AntiForgeryToken()
         <div class="form-group">
-            <label asp-for="EventName" class="form-label"></label>
-            <input asp-for="EventName" class="form-control" placeholder="Enter event name" />
-            <span asp-validation-for="EventName" class="text-danger"></span>
+            <label for="EventName" class="form-label">Event Name</label>
+            <input id="EventName" name="EventName" class="form-control" placeholder="Enter event name" />
+            <span class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="ParticipantName" class="form-label"></label>
-            <input asp-for="ParticipantName" class="form-control" placeholder="Enter participant name" />
-            <span asp-validation-for="ParticipantName" class="text-danger"></span>
+            <label for="ParticipantName" class="form-label">Participant Name</label>
+            <input id="ParticipantName" name="ParticipantName" class="form-control" placeholder="Enter participant name" />
+            <span class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="EmailAddress" class="form-label"></label>
-            <input asp-for="EmailAddress" class="form-control" placeholder="Enter email address" />
-            <span asp-validation-for="EmailAddress" class="text-danger"></span>
+            <label for="EmailAddress" class="form-label">Email Address</label>
+            <input id="EmailAddress" name="EmailAddress" class="form-control" placeholder="Enter email address" />
+            <span class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="NumberOfTickets" class="form-label"></label>
-            <input asp-for="NumberOfTickets" class="form-control" placeholder="Enter number of tickets" />
-            <span asp-validation-for="NumberOfTickets" class="text-danger"></span>
+            <label for="NumberOfTickets" class="form-label">Number of Tickets</label>
+            <input id="NumberOfTickets" name="NumberOfTickets" class="form-control" placeholder="Enter number of tickets" />
+            <span class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="EventType" class="form-label"></label>
-            <select asp-for="EventType" class="form-control">
+            <label for="EventType" class="form-label">Event Type</label>
+            <select id="EventType" name="EventType" class="form-control">
                 <option value="" disabled selected>Select event type</option>
                 <option value="Virtual">Virtual</option>
                 <option value="InPerson">In-Person</option>
             </select>
-            <span asp-validation-for="EventType" class="text-danger"></span>
+            <span class="text-danger"></span>
         </div>
         <button type="submit" class="btn btn-primary btn-lg rounded-button">Register</button>
     </form>
@@ -48,6 +48,7 @@
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/js/validation.js"></script>
 }
+
 
 <style>
     .container {

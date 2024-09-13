@@ -1,10 +1,22 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\js\validation.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\validation.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\validation.js" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\EntryManagementSystem.Application\EntryManagementSystem.Application.csproj" />
